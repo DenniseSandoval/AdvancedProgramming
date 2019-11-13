@@ -1,0 +1,205 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles.css">
+    
+    <title>FormCustomer</title>
+</head>
+<body>
+    <center>
+        <div class="container p-9 " >
+                <center>
+                    <h2>
+                        REGISTRO GUIA DE REMISIÓN
+                    </h2>  
+                </center>
+            <div class="row">
+                <div class="col-md-11" >
+                    <div class="card-body center">
+                        <form action="/guia/add" method="post">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                </tr>
+                            </thead>
+                        <tbody>
+                        <tr>
+                            <div class="form-group">
+                                <td><label>Fecha de envio: </label></td>
+                                <td><input type="date" name="fechaenvio" value="" min="2018-01-01" max="2025-12-31" step="1"></td>
+                                <td><label>Hora de envio: </label></td>
+                                <td><input type="time" name="horaenvio" value="" min="00:01" max="23:59" step="60"></td>
+                            </div>
+                        </tr>
+                        <tr>
+                            <div class="form-group">
+                                <td><label>Fecha de llegada: </label></td>
+                                <td><input type="date" name="fechallegada" value=""  min="2018-01-01" max="2025-12-31" step="1"></td>
+                                <td><label>Hora de llegada: </label></td>
+                                <td><input type="time" name="horallegada" value="" min="00:01" max="23:59" step="60"></td>
+                            </div>
+                        </tr>
+                        <tr></tr>
+                        </tbody>
+                        </table>
+                        <table class="table" >
+                            <thead>
+                                <tr>
+                                    <td><b>Transportista</b></td>
+                                    <td><select class="form-control"  name="codigotransportista" value="" >
+                                        {{#each transportista}}
+                                                <option >
+                                                    {{codigotransp}} 
+                                                </option>      
+                                        {{/each}} 
+                                    </select> 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Datos Remitente</b></td><td><b>Datos Destinatario</b></td>
+                                </tr>
+                            </thead>
+                        <tbody>
+                           <td><select class="form-control"  name="ciremit" value="" >
+                               {{#each cliente}}
+                                    <option >
+                                        {{ci}} 
+                                    </option>      
+                               {{/each}} 
+                                </select> 
+                            </td>
+                            <td><select class="form-control"  name="cidestin" value="" >
+                               {{#each cliente}}
+                                    <option >
+                                        {{ci}} 
+                                    </option>      
+                               {{/each}} 
+                                </select> 
+                            </td>
+                        </tbody>
+                        </table>
+                        
+                        <table class="table" >
+                            <thead>
+                                <tr>
+                                    <td><b>Datos Zona</b></td>
+                                </tr>
+                            </thead>
+                        <tbody>
+                            <tr>
+                                <div class="form-group">
+                                    <td><label>Zona envio:</label></td>
+                                    <td><select class="form-control"  name="codigozonaenvio" value="" >
+                                    {{#each zona}}
+                                            <option >
+                                                {{codigozona}} 
+                                            </option>      
+                                    {{/each}} 
+                                    </select></td><td></td><td></td>
+                                    <td><label>Zona llegada:</label></td>
+                                    <td><select class="form-control"  name="codigozonallegada" value="" >
+                                    {{#each zona}}
+                                            <option >
+                                                {{codigozona}} 
+                                            </option>      
+                                    {{/each}} 
+                                    </select></td>
+                                </div>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <table class="table" >
+                            <thead>
+                                <tr>
+                                    <td><b>Detalle Guia</b></td>
+                                </tr>
+                            </thead>
+                        <tbody>
+                        <tr>
+                            <div class="form-group">
+                                <td><label>Estado guia:</label></td> 
+                                <td><select class="form-control" id="estadoguia" name="estadoguia" value="">
+                                <option>Cancelada</option>
+                                <option>No cancelada</option>
+                                </select></td><td></td><td>
+                                <td><label>Estado entrega:</label></td> 
+                                <td><select class="form-control" id="estadoentrega" name="estadoentrega" value="">
+                                <option>Entregada</option>
+                                <option>No entregada</option>
+                                <option>Pendiente</option>
+                                </select></td>
+                            </div>
+                        </tr>
+                        </tbody>
+                        </table>
+                        <table class="table" >
+                            <thead>
+                                <tr>
+                                    <td><b>Detalle Productos</b></td>
+                                </tr>
+                            </thead>
+                        <tbody>
+                           <tr>
+                            <div class="form-group">
+                            <td><select class="form-control"  name="nombreprod1" value="" >
+                                <option >-
+                                </option> 
+                               {{#each producto}}
+                                    <option >
+                                        {{codigoprod}} 
+                                    </option>
+                               {{/each}} 
+                                </select> 
+                            </td>
+                            <td><select class="form-control"  name="nombreprod2" value="" >
+                               <option >-
+                               </option> 
+                               {{#each producto}}
+                                   <option >
+                                        {{codigoprod}} 
+                                    </option>      
+                               {{/each}} 
+                                </select> 
+                            </td>
+                            <td><select class="form-control"  name="nombreprod3" value="" >
+                               <option >-
+                                </option> 
+                               {{#each producto}}
+                                    <option >
+                                        {{codigoprod}} 
+                                    </option>      
+                               {{/each}} 
+                                </select> 
+                            </td>
+                            <td><select class="form-control"  name="nombreprod4" value="" >
+                               <option >-
+                                </option> 
+                               {{#each producto}}
+                                    <option >
+                                        {{codigoprod}} 
+                                    </option>      
+                               {{/each}} 
+                                </select> 
+                            </td>
+                            <td><select class="form-control"  name="nombreprod5" value="" >
+                               <option >-
+                                </option> 
+                               {{#each producto}}
+                                    <option >
+                                        {{codigoprod}} 
+                                    </option>      
+                               {{/each}} 
+                                </select> 
+                            </td>
+                            <td><input type="submit" name="buscar" action="/guia/add" method="post" class="btn btn-success btn-block center" value="Registrar"></button></td>
+                        </div>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>   
+</body>
+</html>
