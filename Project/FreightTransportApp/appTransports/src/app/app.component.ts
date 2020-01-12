@@ -32,13 +32,13 @@ export class AppComponent {
     [
       {
         title : "Home",
-        url   : "/home",
+        url   : "/tabs/home",
         icon  : "home"
       },
       {
-        title : "Chat",
-        url   : "/chat",
-        icon  : "chatboxes"
+        title : "Cliente",
+        url   : "/tabs/tab2",
+        icon  : "contacts"
       },
       {
         title : "Contacts",
