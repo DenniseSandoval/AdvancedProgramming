@@ -36,15 +36,30 @@ export class AppComponent {
         icon  : "home"
       },
       {
-        title : "Cliente",
-        url   : "/tabs/tab2",
+        title : "Clientes",
+        url   : "/tabs/menu-customer",
         icon  : "contacts"
       },
       {
-        title : "Contacts",
+        title : "Zonas",
         url   : "/contacts",
-        icon  : "contacts"
+        icon  : "pin"
       },
+      {
+        title : "Productos",
+        url   : "/contacts",
+        icon  : "cart"
+      },
+      {
+        title : "Guias de Remisión",
+        url   : "/contacts",
+        icon  : "paper"
+      },
+      {
+        title : "Transportistas",
+        url   : "/subway",
+        icon  : "subway"
+      }
     ]
   }
 }

@@ -1,9 +1,45 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>customer</ion-title>
-  </ion-toolbar>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <ion-toolbar><br>
+        <ion-title>Cliente</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-label class="label" position="stacked">Cédula</ion-label>
+                <ion-input class="text" clearInput required="true" autofocus></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">Nombre</ion-label>
+                <ion-input class="text" clearInput required="true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">RUC</ion-label>
+                <ion-input class="text" clearInput required="true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">Telf.Convencional</ion-label>
+                <ion-input class="text" clearInput required="true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">Celular</ion-label>
+                <ion-input class="text" clearInput required="true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">E-mail</ion-label>
+                <ion-input class="text" type="E-mail" clearInput required="true"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">Dirección</ion-label>
+                <ion-textarea class="text" placeholder="Av. Simon Bolivar"></ion-textarea>
+            </ion-item>
+            <ion-button shape="round" fill="outline" (click)="sendPostRequest()" expand="block">
+                <ion-icon slot="start" name="person-add"></ion-icon>
+                Agregar
+            </ion-button>
+        </ion-card-content>
+    </ion-card>
 </ion-content>

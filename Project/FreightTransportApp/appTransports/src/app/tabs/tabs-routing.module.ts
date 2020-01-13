@@ -38,6 +38,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'customer',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../customer/customer.module').then(m => m.CustomerPageModule)
+          }
+        ]
+      },
+      {
+        path: 'menu-customer',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../menu-customer/menu-customer.module').then(m => m.MenuCustomerPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
