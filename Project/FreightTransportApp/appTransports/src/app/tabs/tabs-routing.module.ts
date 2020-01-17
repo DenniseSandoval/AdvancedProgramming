@@ -58,6 +58,46 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'menu-carrier',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../menu-carrier/menu-carrier.module').then(m => m.MenuCarrierPageModule)
+          }
+        ]
+      },
+      {
+        path: 'menu-guide',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../menu-guide/menu-guide.module').then(m => m.MenuGuidePageModule)
+          }
+        ]
+      },
+      {
+        path: 'menu-product',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../menu-product/menu-product.module').then(m => m.MenuProductPageModule)
+          }
+        ]
+      },
+      {
+        path: 'menu-zone',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../menu-zone/menu-zone.module').then(m => m.MenuZonePageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

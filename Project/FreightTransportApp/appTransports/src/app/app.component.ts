@@ -42,22 +42,22 @@ export class AppComponent {
       },
       {
         title : "Zonas",
-        url   : "/contacts",
+        url   : "/tabs/menu-zone",
         icon  : "pin"
       },
       {
         title : "Productos",
-        url   : "/contacts",
+        url   : "/tabs/menu-product",
         icon  : "cart"
       },
       {
         title : "Guias de Remisión",
-        url   : "/contacts",
+        url   : "/tabs/menu-guide",
         icon  : "paper"
       },
       {
         title : "Transportistas",
-        url   : "/subway",
+        url   : "/tabs/menu-carrier",
         icon  : "subway"
       }
     ]

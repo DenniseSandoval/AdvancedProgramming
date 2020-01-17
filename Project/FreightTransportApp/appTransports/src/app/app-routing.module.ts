@@ -13,7 +13,39 @@ const routes: Routes = [
   {
     path: 'menu-customer',
     loadChildren: () => import('./menu-customer/menu-customer.module').then( m => m.MenuCustomerPageModule)
+  },  {
+    path: 'searchcustomer',
+    loadChildren: () => import('./searchcustomer/searchcustomer.module').then( m => m.SearchcustomerPageModule)
+  },
+  {
+    path: 'searchcustomerid',
+    loadChildren: () => import('./searchcustomerid/searchcustomerid.module').then( m => m.SearchcustomeridPageModule)
+  },
+  {
+    path: 'deletecustomer',
+    loadChildren: () => import('./deletecustomer/deletecustomer.module').then( m => m.DeletecustomerPageModule)
+  },
+  {
+    path: 'updatecustomer',
+    loadChildren: () => import('./updatecustomer/updatecustomer.module').then( m => m.UpdatecustomerPageModule)
+  },
+  {
+    path: 'menu-carrier',
+    loadChildren: () => import('./menu-carrier/menu-carrier.module').then( m => m.MenuCarrierPageModule)
+  },
+  {
+    path: 'menu-zone',
+    loadChildren: () => import('./menu-zone/menu-zone.module').then( m => m.MenuZonePageModule)
+  },
+  {
+    path: 'menu-product',
+    loadChildren: () => import('./menu-product/menu-product.module').then( m => m.MenuProductPageModule)
+  },
+  {
+    path: 'menu-guide',
+    loadChildren: () => import('./menu-guide/menu-guide.module').then( m => m.MenuGuidePageModule)
   }
+
 ];
 @NgModule({
   imports: [
