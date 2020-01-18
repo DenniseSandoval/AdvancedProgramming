@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import {ApiserviceService} from '../../providers/apiservice.service';
 
 @Component({
   selector: 'app-searchcustomer',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchcustomerPage implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  studentsData: any;
+ 
+  constructor(
+    public apiService: ApiserviceService
+  ) {
+    this.studentsData = [];
   }
+  ngOnInit() {
+    this.getAllStudents();
+  }
+  getAllStudents() {
+    //Get saved list of students
+    this.apiService.getList().subscribe(response => {
+      console.log(response);
+      this.studentsData = response;
+    })
+  }
+
 
 }

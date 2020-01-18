@@ -1,9 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>searchcustomer</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Clientes</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let client of clients">
+          {{client.ciClient}} 
+        </button>
+    </ion-list>
+    <h2>df</h2>
 </ion-content>

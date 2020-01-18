@@ -38,6 +38,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'searchcustomer',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../searchcustomer/searchcustomer.module').then(m => m.SearchcustomerPageModule)
+          }
+        ]
+      },
+      {
         path: 'customer',
         children: [
           {
