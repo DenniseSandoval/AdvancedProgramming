@@ -1,23 +1,19 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>Clientes</ion-title>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Clientes
+        </ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let item of studentsData">
-                <td>{{item.ciClient}}</td>
-                <td>{{item.nameClient}}</td>
-            </tr>
-        </tbody>
-    </table>
-    <h2>df</h2>
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let cr of classrooms">
+            <ion-icon name="person" slot="start"></ion-icon>
+            {{cr.guideId}}
+        </ion-item>
+    </ion-list>
 </ion-content>
