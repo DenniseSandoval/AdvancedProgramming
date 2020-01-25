@@ -1,5 +1,7 @@
 {
   "name": "appTransports",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

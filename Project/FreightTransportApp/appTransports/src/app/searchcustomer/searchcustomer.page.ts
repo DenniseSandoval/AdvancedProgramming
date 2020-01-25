@@ -8,26 +8,30 @@ import {ApiserviceService} from '../../providers/apiservice.service'; //importam
   templateUrl: './searchcustomer.page.html',
   styleUrls: ['./searchcustomer.page.scss'],
 })
-export class SearchcustomerPage implements OnInit{
-  constructor(public api: ApiserviceService, public loadingController: LoadingController) { }
-  classrooms: any = {};
+export class SearchcustomerPage{
+  constructor(public api: ApiserviceService, public loadingController: LoadingController) {
+    
+    this.ngOnInit();
+   }
+  classrooms: any =[];
 
-  async getClassrooms() {
+  async  ngOnInit() {
+    console.log("entro");
     const loading = await this.loadingController.create({
       message: 'Loading'
     });
+    
     await loading.present();
     this.api.getClassroom()
       .subscribe(res => {
         console.log(res);
         this.classrooms = res;
+        console.log(this.classrooms);
         loading.dismiss();
       }, err => {
         console.log(err);
         loading.dismiss();
       });
   }
-  ngOnInit() {
-    this.getClassrooms();
-  }
+  
 }

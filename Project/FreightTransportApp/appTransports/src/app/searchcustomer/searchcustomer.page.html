@@ -13,7 +13,8 @@
     <ion-list>
         <ion-item *ngFor="let cr of classrooms">
             <ion-icon name="person" slot="start"></ion-icon>
-            {{cr.guideId}}
+            <br><br>Cédula: {{cr.ciClient}}<br>Nombre: {{cr.nameClient}}<br>Dirección: {{cr.addressClient}}<br>Email: {{cr.emailClient}}
+            <br><br>
         </ion-item>
     </ion-list>
 </ion-content>
