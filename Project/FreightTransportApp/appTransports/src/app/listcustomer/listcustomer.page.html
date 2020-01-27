@@ -18,8 +18,8 @@
                 <td>{{cr.ciClient}}</td>
                 <td> {{cr.nameClient}}</td>
                 <td style="display: flex">
-                    <ion-button color="danger" size="small" (click)="delete(cr)">
-                        <ion-icon name="trash"></ion-icon>
+                    <ion-button color="warning" size="small" routerLink='/updatecustomer/{{cr.ciClient}}'>
+                        <ion-icon name="create"></ion-icon>
                     </ion-button>
                 </td>
             </tr>

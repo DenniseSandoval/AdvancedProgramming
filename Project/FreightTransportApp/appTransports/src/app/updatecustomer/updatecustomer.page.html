@@ -1,9 +1,40 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>updatecustomer</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Editar Cliente</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding>
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-label class="label" position="stacked">Nombre</ion-label>
+                <ion-input [(ngModel)]="classrooms.nameClient" class="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">RUC</ion-label>
+                <ion-input [(ngModel)]="classrooms.rucClient" class="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">Telf.Convencional</ion-label>
+                <ion-input [(ngModel)]="classrooms.phoneClient" class="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">Celular</ion-label>
+                <ion-input [(ngModel)]="classrooms.mobileClient" class="text"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">E-mail</ion-label>
+                <ion-input [(ngModel)]="classrooms.emailClient" class="text" type="E-mail"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label class="label" position="stacked">Dirección</ion-label>
+                <ion-textarea [(ngModel)]="classrooms.addressClient" class="text" placeholder="Av. Simon Bolivar"></ion-textarea>
+            </ion-item>
+            <ion-button (click)="update()" shape="round" color="success" fill="outline" expand="block">
+                <ion-icon slot="start" name="create"></ion-icon>
+                Modificar
+            </ion-button>
+        </ion-card-content>
+    </ion-card>
 </ion-content>

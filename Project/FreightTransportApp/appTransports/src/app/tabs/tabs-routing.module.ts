@@ -48,6 +48,35 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'deletecustomer',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../deletecustomer/deletecustomer.module').then(m => m.DeletecustomerPageModule)
+          }
+        ]
+      },{
+        path: 'updatecustomer',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../updatecustomer/updatecustomer.module').then(m => m.UpdatecustomerPageModule)
+          }
+        ]
+      },
+      {
+        path: 'listcustomer',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../listcustomer/listcustomer.module').then(m => m.ListcustomerPageModule)
+          }
+        ]
+      },
+      {
         path: 'customer',
         children: [
           {

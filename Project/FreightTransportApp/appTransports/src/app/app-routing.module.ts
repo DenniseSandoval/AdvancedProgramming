@@ -13,7 +13,8 @@ const routes: Routes = [
   {
     path: 'menu-customer',
     loadChildren: () => import('./menu-customer/menu-customer.module').then( m => m.MenuCustomerPageModule)
-  },  {
+  },
+  {
     path: 'searchcustomer',
     loadChildren: () => import('./searchcustomer/searchcustomer.module').then( m => m.SearchcustomerPageModule)
   },
@@ -26,7 +27,7 @@ const routes: Routes = [
     loadChildren: () => import('./deletecustomer/deletecustomer.module').then( m => m.DeletecustomerPageModule)
   },
   {
-    path: 'updatecustomer',
+    path: 'updatecustomer/:id',
     loadChildren: () => import('./updatecustomer/updatecustomer.module').then( m => m.UpdatecustomerPageModule)
   },
   {
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'menu-guide',
     loadChildren: () => import('./menu-guide/menu-guide.module').then( m => m.MenuGuidePageModule)
+  },
+  {
+    path: 'listcustomer',
+    loadChildren: () => import('./listcustomer/listcustomer.module').then( m => m.ListcustomerPageModule)
   }
 
 ];
