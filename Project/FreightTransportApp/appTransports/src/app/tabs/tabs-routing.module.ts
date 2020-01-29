@@ -48,6 +48,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'searchcustomerid',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../searchcustomerid/searchcustomerid.module').then(m => m.SearchcustomeridPageModule)
+          }
+        ]
+      },
+      {
+        path: 'searclientdetail',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../searclientdetail/searclientdetail.module').then(m => m.SearclientdetailPageModule)
+          }
+        ]
+      },
+      {
         path: 'deletecustomer',
         children: [
           {
@@ -113,6 +133,36 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../menu-guide/menu-guide.module').then(m => m.MenuGuidePageModule)
+          }
+        ]
+      },
+      {
+        path: 'addguide',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../addguide/addguide.module').then(m => m.AddguidePageModule)
+          }
+        ]
+      },
+      {
+        path: 'searchguide',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../searchguide/searchguide.module').then(m => m.SearchguidePageModule)
+          }
+        ]
+      },
+      {
+        path: 'deleteguide',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../deleteguide/deleteguide.module').then(m => m.DeleteguidePageModule)
           }
         ]
       },

@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>searchcustomerid</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Búsqueda Clientes</ion-title>
+    </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+    <ion-card>
+        <ion-card-content>
+            <ion-item>
+                <ion-input [(ngModel)]="ciClient"></ion-input>
+                <ion-button shape="round" routerLink='/searclientdetail/{{ciClient}}'>
+                    <ion-icon slot="start" name="search"></ion-icon>
+                </ion-button>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
 </ion-content>

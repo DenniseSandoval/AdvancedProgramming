@@ -11,32 +11,24 @@ import { Customer } from '../models/customer';
 })
 export class UpdatecustomerPage implements OnInit {
   id: number;
-  classrooms: any ;
+  classrooms: Customer ;
   constructor(
     public activatedRoute: ActivatedRoute,
     public router: Router,
     public apiService: ApiserviceService
   ) {
     this.classrooms = new Customer();
+    this.id = this.activatedRoute.snapshot.params["id"];
+    this.classrooms.ciClient=this.activatedRoute.snapshot.params["id"];
+    
+    this.ngOnInit();
   }
   ngOnInit() {
-    this.id = this.activatedRoute.snapshot.params["id"];
-    //get item details using id
-    this.apiService.getItem(this.id).subscribe(response => {
-      console.log("itemid");
-      console.log(this.apiService.getItem(this.id));
-      console.log(this.id);
-      console.log(this.classrooms);
-      console.log(response);
-      this.classrooms = response;
-    })
   }
  
   update() {
-    //Update item by taking id and updated data object
     this.apiService.updateItem(this.id, this.classrooms).subscribe(response => {
-      //this.router.navigate(['list']);
-      console.log("actualizado")
+      this.router.navigate(['searchcustomer']);
     })
   }
 }

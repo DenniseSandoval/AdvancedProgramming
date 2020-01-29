@@ -14,6 +14,7 @@ const urlAdd="http://freigthtransport.ddns.net:1024/FreightTransport/project/cli
 const urlDelete="http://freigthtransport.ddns.net:1024/FreightTransport/project/client/deleteClient";
 const urlUpdate="http://freigthtransport.ddns.net:1024/FreightTransport/project/client/updateclient";
 const urlgetId="http://freigthtransport.ddns.net:1024/FreightTransport/project/client/searchClient";
+const urlGuide="http://freigthtransport.ddns.net:1024/FreightTransport/project/guide";
 @Injectable({
   providedIn:"root"
 })
@@ -30,8 +31,12 @@ export class ApiserviceService {
   getClassroom(){
     return this.http.get(apiUrl);
   }
-  getItem(id) {
-    return this.http.get<Customer>(urlgetId + '/' + id, this.httpOptions);
+  getGuides(){
+    return this.http.get(urlGuide+'/showallguides');
+  }
+  getItem(id){
+    console.log("hola"+id);
+    return this.http.get(urlgetId + '/' + 'id', this.httpOptions);
   }
   // Create a new item
   createItem(item): Observable<Customer> {
@@ -43,6 +48,7 @@ export class ApiserviceService {
     return this.http.delete<Customer>(urlDelete + '/' + id, this.httpOptions);
   }
   updateItem(id, item): Observable<Customer> {
+    console.log("servicio uodate");
     console.log( JSON.stringify(item));
     return this.http.put<Customer>(urlUpdate + '/' + id, JSON.stringify(item), this.httpOptions);
   }

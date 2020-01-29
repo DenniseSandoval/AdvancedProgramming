@@ -32,7 +32,7 @@ export class AppComponent {
     [
       {
         title : "Home",
-        url   : "/tabs/home",
+        url   : "/tabs/tab1",
         icon  : "home"
       },
       {

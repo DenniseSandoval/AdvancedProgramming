@@ -49,6 +49,22 @@ const routes: Routes = [
   {
     path: 'listcustomer',
     loadChildren: () => import('./listcustomer/listcustomer.module').then( m => m.ListcustomerPageModule)
+  },
+  {
+    path: 'searchguide',
+    loadChildren: () => import('./searchguide/searchguide.module').then( m => m.SearchguidePageModule)
+  },
+  {
+    path: 'addguide',
+    loadChildren: () => import('./addguide/addguide.module').then( m => m.AddguidePageModule)
+  },
+  {
+    path: 'deleteguide',
+    loadChildren: () => import('./deleteguide/deleteguide.module').then( m => m.DeleteguidePageModule)
+  },
+  {
+    path: 'searclientdetail/:id',
+    loadChildren: () => import('./searclientdetail/searclientdetail.module').then( m => m.SearclientdetailPageModule)
   }
 
 ];

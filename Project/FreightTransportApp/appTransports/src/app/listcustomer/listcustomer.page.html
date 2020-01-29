@@ -8,14 +8,15 @@
     <table class="table" center>
         <thead>
             <tr>
-                <th scope="col">Cedula</th>
-
-                <th scope="col">Nombre</th>
+                <td>Cedula</td>
+                <td style="visibility: hidden;">d</td>
+                <td>Nombre</td>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let cr of classrooms">
                 <td>{{cr.ciClient}}</td>
+                <td style="visibility: hidden;"> d</td>
                 <td> {{cr.nameClient}}</td>
                 <td style="display: flex">
                     <ion-button color="warning" size="small" routerLink='/updatecustomer/{{cr.ciClient}}'>
