@@ -34,9 +34,9 @@ export class ApiserviceService {
   getGuides(){
     return this.http.get(urlGuide+'/showallguides');
   }
-  getItem(id){
-    console.log("hola"+id);
-    return this.http.get(urlgetId + '/' + 'id', this.httpOptions);
+  getItem(id) {
+    return this.http
+      .get(urlgetId + '/' + id);
   }
   // Create a new item
   createItem(item): Observable<Customer> {
